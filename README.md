@@ -2,6 +2,7 @@
 writen by Simon Sutherland 
 in 2012-04-12
 added to repo in 2016-3-6
+hosted at http://necrosis.org/dev/timr/
 
 ##What is it?
 A lap timer to help me time my PT reps, so I can focus on the exercises and not the counting. 
