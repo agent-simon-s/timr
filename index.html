@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html lang="en-US" dir="LTR" >
+<head>
+<title>Exercize Timr</title>
+<meta name="description" content="Mini Web-App to help you time Excercises, or other tasks with 'lap' counter">
+<link href="css/timer.css" type="text/css" rel="stylesheet" />
+<!--[if lt IE 9]>
+     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="js/modernizr.js"></script>
+</head>
+<body bgcolor=#FFFFFF>
+
+<section id="clock">
+	<div id="face">
+         <div id="display">
+            <h1 id="time">00:45</h1>
+            <h3 id="counter">Counter: <span id="count">00</span></h3>
+         </div>
+     
+          <div id="controls">
+            <form id="timerControls">
+            	<legend><h2>Timer Controls</h2></legend>
+                <fieldset>
+                <ul>
+                	<li><button type="button" name="start" id="start" class="off" tabindex="1" >start timer</button></li>
+                    <li><button type="button" name="stop" id="stop" class="on"tabindex="2" >stop timer</button></li>
+                	<li>
+                        <button type="button" name="set" id="set" tabindex="3">set timer</button>
+                        <fieldset>
+                            <input type="radio" name="increments"  id="inSec" value="inSec" checked=checked />
+                            <label for="inSec">seconds</label>
+                            <input type="radio" name="increments"  id="inMin" value="inMin" />
+                            <label for="inMin">minutes</label>
+                        </fieldset>
+                        <input type="text" name="tUnit"  id="tUnit" value="45" tabindex="5"  />
+                          
+                    </li>
+                    <li>
+                    	<fieldset>
+                        	<button type="button" name="reset" id="reset" tabindex="6" >reset counter</button>
+                         </fieldset>   
+                    </li>
+                 </ul> 
+                 </fieldset>                
+                 <aside>
+                 	<legend><a href="#"><h2>Settings</h2></a></legend>
+                    <fieldset>
+                            <input type="radio" name="chime"  id="wTone" value="wTone" checked=checked tabindex="7"  />
+                            <label for="inSec">"eep"</label>
+                            <input type="radio" name="chime"  id="wWord" value="wWord" />
+                            <label for="inMin">"done"</label>
+                        </fieldset>
+                 </aside>
+            </form>
+          </div>
+     </div>
+</section>
+<audio id="chime" preload="auto">
+	<source src="audio/eep.mp3"></source>  
+	<source src="audio/eep.ogg"></source>  
+	<source src="audio/eep.wav"></source>
+	<!--<source src="audio/eep.m4a"></source> -->   
+	<!--<source src="audio/v_done_4.mp3"></source>
+    <source src="audio/v_eep_0084.mp3"></source>-->
+	Your browser isn't invited for super fun audio time.
+</audio>
+<!--<script src="js/timr.js"></script>-->
+ <script src="js/timr.min.js"></script>
+</body>
+</html>

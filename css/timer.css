@@ -1,0 +1,324 @@
+@charset "UTF-8";
+/* CSS Document 
+TOC:
+1. RSET & HTML ELEMENT STYLES
+2. ROOT LAYOUT ELEMENTS
+3. NAVIGATION STYLES
+4. GENERIC / PORTABLE STYLES
+5. SPECIFIC SECTION / PAGE STYLES
+6. HACKS
+*/
+
+/* Colour Key
+Frame Black:    #000
+Darker Grey:    #111
+Dark Grey:      #444
+Start Green:    #00BF1A
+Start Green OFF: #235F2B
+Stop Red: 		#C00
+Stop Red OFF:   #7F1717
+Set Yellow:     #FFCC33
+Subhead Grey	#C2C2C2 */
+
+@font-face {
+    font-family: 'BebasRegular';
+    src: url('../assets/fonts/BEBAS___-webfont.eot');
+    src: url('../assets/fonts/BEBAS___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/BEBAS___-webfont.woff') format('woff'),
+         url('../assets/fonts/BEBAS___-webfont.ttf') format('truetype'),
+         url('../assets/fonts/BEBAS___-webfont.svg#BebasRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ExoMedium';
+    src: url('../assets/fonts/Exo-Medium-webfont.eot');
+    src: url('../assets/fonts/Exo-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/Exo-Medium-webfont.woff') format('woff'),
+         url('../assets/fonts/Exo-Medium-webfont.ttf') format('truetype'),
+         url('../assets/fonts/Exo-Medium-webfont.svg#ExoMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ExoDemiBold';
+    src: url('../assets/fonts/Exo-DemiBold-webfont.eot');
+    src: url('../assets/fonts/Exo-DemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/Exo-DemiBold-webfont.woff') format('woff'),
+         url('../assets/fonts/Exo-DemiBold-webfont.ttf') format('truetype'),
+         url('../assets/fonts/Exo-DemiBold-webfont.svg#ExoDemiBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 1. RSET / HTML ELEMENT STYLES =============================================== */ 
+* { padding:0;
+	margin:0;
+	}
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-size: 100%;
+	}
+html {height:100%
+	}						
+article, aside, figure, footer, header, hgroup, nav, section {display: block;
+	}
+body {height:100%;
+    background:#FFF;
+	color:#FFF;
+    font:9px/16px normal  Arial, Helvetica,  sans-serif;
+	font-family:  ExoMedium, Arial, Helvetica, sans-serif;	
+	} 
+a {	background: transparent;
+    text-decoration:none;
+	font-size: 100%; 
+    vertical-align: baseline; 
+	}
+a {	text-decoration:none;
+	font-weight:600;
+	}
+a:hover {
+	text-decoration:underline;
+	}
+h1,h2,h3,h4,h5,h6 {
+    font:16px/16px normal  Arial, Helvetica,  sans-serif;
+	font-family:  ExoMedium, Arial, Helvetica, sans-serif;
+	color:#C2C2C2;
+	}
+h2 { font-size:16px;;
+	}		
+p { padding:0 0 8px;
+	}
+img {border:none;
+	}
+hr {height:1px;
+	width:100%;
+	margin:0px auto 0px;
+	color:#C2C2C2;
+	background-color:#C2C2C2;
+/*	border-color:#ededed; */
+	border:none;
+	}
+sup {font-size:.6em;
+	line-height:0.1em;
+	}
+fieldset {background:none;
+	border:none;
+	}
+label, input {line-height:19px;
+	}
+aside { display:none }
+
+/* 2. ROOT LAYOUT ELEMENTS =============================================== */ 
+#clock {
+    position:relative;    
+	margin:0 auto;    
+	width: 700px;
+	}
+#face {
+	float:none;
+	position:relative;
+	margin:20px;
+	width: 640px;
+	height: 200px;
+	padding:20px;
+	background:#000;
+	color:#FFF;
+	font-size:13px;
+	}
+#clock #controls, #clock #display {
+	position:relative;
+	float:left;
+	margin:0px;
+	width:350px;
+	height: 180px;
+	padding:10px;
+	background:#111;
+	}
+#clock #controls {
+	margin-left:20px;
+	width:230px;
+	background:#444;
+	}
+
+/* 3. NAVIGATION STYLES =============================================== */ 
+
+
+/* 4. GENERIC / PORTABLE STYLES =============================================== */ 
+
+
+/* 5. SPECIFIC SECTION / PAGE STYLES =============================================== */ 
+#display h1#time {
+	color:#EEE;
+    font-size: 136px;
+	line-height:155px;
+	letter-spacing: 1px;
+	font-family:  Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-align:center;
+    text-shadow: 1px 1px #BBB, -1px -1px #333;
+	}
+#display #counter { 
+	text-align:center;
+	letter-spacing: 4px;
+	text-transform:uppercase;
+	}
+#display #counter span{ 
+	padding:2px;	
+	letter-spacing: 2px;
+	/* color:#F00 */
+	}
+    
+#controls ul li { 
+	height:40px;
+	padding-left:3px;
+	list-style:none; 
+	}	
+#controls legend {
+	display:block;
+    position:relative;
+    float:none;
+    width:100%;
+	padding:6px 0px;
+    color:#FFF;
+    text-align:center;
+	}
+#controls h2 {
+    margin:0 auto;
+    text-align:center;
+    font-size:11px;
+	line-height:11px;    
+	letter-spacing: 5px;
+    font-family: ExoMedium,Arial,Helvetica,sans-serif;
+    font-weight:normal;
+    text-transform:uppercase;
+    color:#FFF
+	}	
+#controls label {
+	display:block;
+	float: left;
+	width: 58px;
+	height: 11px;
+	padding:2px 0px;
+	font-size: 10px;
+	line-height:11px;
+    letter-spacing:1px;
+	text-transform:uppercase;
+	}	
+#controls button {
+	display:block;
+	float: left;	
+	margin:auto;
+	width:225px;
+	padding:4px 2px;
+    background-color:#FC3;
+	border:none;
+	color:#111;
+	font-size: 20px;
+	line-height:20px;
+	letter-spacing: 1px;
+	font-family:  ExoMedium, Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+    cursor:pointer;
+	}
+#controls #start.off {
+	background-color:#00BF1A;
+	color:#FFF;   
+    text-shadow:  -1px -1px #333;
+	}
+#controls #start.on {
+	background-color:#235F2B;
+	color:#235F2B; /*#333*/;
+    text-shadow: 1px 1px #BBB, -1px -1px #333;
+	}	
+#controls #stop.off {
+	background-color:#C00;
+	color:#FFF;
+    text-shadow:  -1px -1px #333;
+	}
+#controls #stop.on{
+	background-color:#7F1717;
+	color:#7F1717; /*#333;*/
+    text-shadow: 1px 1px #BBB, -1px -1px #333;
+	}
+#controls #set {
+	width:102px;
+	color:#111;
+	font-size: 15px; line-height:15px;
+	margin: 2px 3px 2px 0;
+	}
+#controls #reset {
+	color:#111;
+	font-size: 15px; line-height:15px;
+	}
+#controls input {
+	float: left;
+	margin: 0px 2px;
+	width:15px;
+	height: 15px;
+	font-size: 16px;
+	line-height:14px;
+	text-transform:uppercase;
+	text-align:right;
+	}
+#controls fieldset fieldset{
+	display:block;
+	float: left;
+	width:80px;	
+	}
+#controls input[type=text] {
+	width:33px;
+	margin: 0px;
+	padding:3px 0px;
+	}
+
+/* 6. HACKS =============================================== */ 
+.rounded, #face {
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    border-radius: 20px;
+	}
+
+#clock #controls {
+    -moz-border-radius: 0 10px 10px 0;
+    -webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-top-lrft-radius: 0px;
+	-webkit-border-bottom-lrft-radius: 0px;
+   /*  -khtml-border-radius: 20px; was breaking saf left corners */
+    border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	}
+
+#controls button {
+	-moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+	}
+	
+#face, #controls #set,#controls #reset, #controls #stop.off, #controls #start.off {
+	-moz-box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;.
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	}
+
+#face {
+	-moz-box-shadow: 0px 0px 5px #000;
+	-webkit-box-shadow: 0px 0px 5px #000;
+	box-shadow: 0px 0px 5px #000;.
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+	}
